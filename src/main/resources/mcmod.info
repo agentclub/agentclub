@@ -1,0 +1,16 @@
+[
+{
+  "modid": "calypso",
+  "name": "Calypso",
+  "description": "A 1.12.2 Anarchy Client.",
+  "version": "1.6-beta",
+  "mcversion": "1.12.2",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["3arthqu4ke","Ohare","Sharkyy"],
+  "credits": "Phobos + Vanity",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
