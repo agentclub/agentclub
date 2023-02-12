@@ -32,6 +32,7 @@ public class Earthhack implements Globals {
         LOGGER.info("\n\nInitializing agent.club.");
         SplashScreenHelper.setSplashScreen("Initializing agent.club", 7);
         Display.setTitle(NAME + " " + VERSION);
+        Earthhack.setWindowIcon();
         Managers.load();
         LOGGER.info("Prefix is " + Commands.getPrefix());
         SplashScreenHelper.clear();
@@ -49,6 +50,19 @@ public class Earthhack implements Globals {
 
     public static boolean isRunning() {
         return ((IMinecraft) mc).isEarthhackRunning();
+    }
+
+    public static void setWindowIcon() {
+        if (Util.getOSType() != Util.EnumOS.OSX) {
+            try (InputStream inputStream16x = Minecraft.class.getResourceAsStream("/assets/earthhack/icons/agentclub_16x16.png");
+                 InputStream inputStream32x = Minecraft.class.getResourceAsStream("/assets/earthhack/icons/agentclub_32x32.png");){
+                ByteBuffer[] icons = new ByteBuffer[]{IconUtil.INSTANCE.readImageToBuffer(inputStream16x), IconUtil.INSTANCE.readImageToBuffer(inputStream32x)};
+                Display.setIcon(icons);
+            }
+            catch (Exception e) {
+                LOGGER.error("Couldn't set Windows Icon", e);
+            }
+        }
     }
 
     }

@@ -32,12 +32,12 @@ public class DiscordPresence implements Globals {
         DiscordEventHandlers handlers = new DiscordEventHandlers();
         rpc.Discord_Initialize("1032013846300340295", handlers, true, "");
         presence.startTimestamp = System.currentTimeMillis() / 1000L;
-        presence.details = "calypso on top!!";
+        presence.details = "agent.club owns u";
         presence.state = ".io/shxrk";
-        presence.largeImageKey = "palm";
+        presence.largeImageKey = "robot";
         presence.smallImageKey = "skin";
         presence.smallImageText = "sharkyy's sexy skin";
-        presence.largeImageText = "the sexiest pfp";
+        presence.largeImageText = "the best logo possibly ever";
         rpc.Discord_UpdatePresence(DiscordPresence.presence);
         StopWatch timer = new StopWatch();
         timer.reset();
@@ -53,7 +53,7 @@ public class DiscordPresence implements Globals {
                 }
 
                 rpc.Discord_RunCallbacks();
-                presence.details = "calypso on top!!";
+                presence.details = "agent.club owns u";
                 presence.state = ".io/shxrk";
                 if (timer.passed(TimeUnit.SECONDS.toMillis(15))) {
                     // TODO: only when an update is needed?
