@@ -28,5 +28,5 @@ jobs:
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2
         with:
-          name: Calypso+
+          name: agent.club
           path: ./build/libs/*release.jar  
